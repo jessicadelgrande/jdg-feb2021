@@ -18,7 +18,6 @@ gsap.set(scroller.target, {
 });
 
 function updateScroller() {
-
 	const resized = scroller.resizeRequest > 0;
 
 	if (resized) {
@@ -57,7 +56,6 @@ function onResize() {
 		requestId = requestAnimationFrame(updateScroller);
 	}
 }
-
 
 // toggles class on menu
 // manages display of selected content

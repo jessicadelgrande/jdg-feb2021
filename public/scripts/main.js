@@ -20,7 +20,6 @@ gsap.set(scroller.target, {
 });
 
 function updateScroller() {
-
 	var resized = scroller.resizeRequest > 0;
 
 	if (resized) {

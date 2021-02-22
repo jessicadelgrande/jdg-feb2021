@@ -53,6 +53,42 @@ main {
             }
         }
 
+        a {
+            text-decoration: none;
+            font-size: 1.1rem;
+            color: $grey;
+            font-family: $pressura;
+            position: relative;
+            display: inline-block;
+            transition: all 0.2s ease-in-out 0s;  
+
+
+            &:hover {
+                color: $coral;
+
+                &:before {
+                    height: 4px;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: -2px;
+                left: 0;
+                color: $coral;
+                background-color: $coral;
+                border-radius: 8px;
+                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
         li {
             list-style: none;
             position: relative;
@@ -71,14 +107,21 @@ main {
                     color: $coral;
 
                     &:before {
-                        content: "*";
-                        font-family: $apercu;
-                        margin-left: -20px;
-                        margin-right: 10px;
-                        position: absolute;
-                        top: 1px;
-                        font-size: 1.4rem;
+                        height: 4px;
                     }
+                }
+                
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    color: $coral;
+                    background-color: $coral;
+                    border-radius: 8px;
+                    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                 }
             }
         } 
