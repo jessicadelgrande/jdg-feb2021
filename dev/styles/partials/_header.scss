@@ -173,6 +173,10 @@ header {
         font-size: 4.5rem;
         color: $grey;
         margin: 16px 0;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 2rem;
+        }
     }
     
     .subhead {
