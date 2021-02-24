@@ -1,32 +1,14 @@
 body {
     background-color: $cream;
-    overflow-x: hidden;
-    overflow-y: scroll;
+
 }
 
 .viewport {
-    overflow: hidden;
-    position: fixed;
     height: 100%;
     width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.scroll-container {
-    width: 100%;
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    overflow: hidden;
     display: flex;
     justify-content: center;
-    will-change: transform;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -184,10 +166,11 @@ header {
 
         @media only screen and (max-width: 620px) {
             font-size: 3rem;
+            margin-top: 10vh;
         }
 
         @media only screen and (max-width: 500px) {
-
+            font-size: 2.5rem;
         }
     }
     

@@ -145,32 +145,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   src: url("../../../assets/fonts/GT-Pressura-Mono.otf") format("opentype"); }
 
 body {
-  background-color: #f6f0ea;
-  overflow-x: hidden;
-  overflow-y: scroll; }
+  background-color: #f6f0ea; }
 
 .viewport {
-  overflow: hidden;
-  position: fixed;
   height: 100%;
   width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-
-.scroll-container {
-  width: 100%;
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  overflow: hidden;
   display: flex;
   justify-content: center;
-  will-change: transform;
-  transform-style: preserve-3d;
-  backface-visibility: hidden; }
+  overflow-x: hidden; }
 
 .navbar {
   position: fixed;
@@ -281,7 +263,11 @@ header {
         width: 85vw; } }
     @media only screen and (max-width: 620px) {
       header h1 {
-        font-size: 3rem; } }
+        font-size: 3rem;
+        margin-top: 10vh; } }
+    @media only screen and (max-width: 500px) {
+      header h1 {
+        font-size: 2.5rem; } }
   header .subhead {
     font-family: "GT Pressura Mono";
     font-weight: 300;
@@ -300,7 +286,7 @@ header {
 
 .content {
   width: 65vw;
-  padding-top: 48px; }
+  padding: 48px 0; }
   @media only screen and (max-width: 620px) {
     .content {
       width: 75vw; } }
@@ -342,7 +328,6 @@ main {
       text-decoration: none;
       font-size: 1.1rem;
       color: #292929;
-      font-family: "GT Pressura Mono";
       position: relative;
       display: inline-block;
       transition: all 0.2s ease-in-out 0s; }
@@ -355,7 +340,7 @@ main {
         position: absolute;
         width: 100%;
         height: 1px;
-        bottom: -2px;
+        bottom: 0;
         left: 0;
         color: #f16d68;
         background-color: #f16d68;
