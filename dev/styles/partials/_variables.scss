@@ -1,31 +1,28 @@
-$sml: ( max: 570px );
-$med: ( max: 680px );
-$lrg: ( max: 750px );
-
-$green: #316347;
-$blue: #cce7ce;
-$coral: #f16d68;
+$rorange: #ff370c;
 $cream: #f6f0ea;
-$eggshell: #f3f1e2;
 $grey: #292929;
 
 @font-face {
-    font-family: "Apercu";
-    src: url("../../../assets/fonts/apercu-light-pro.woff") format("woff"),
-    url("../../../assets/fonts/apercu-light-pro.woff2") format("woff2");
+    font-family: "Karla Reg";
+    src: url("../../../assets/fonts/karla-regular-webfont.woff") format("woff");
 }
-$apercu: "Apercu";
+$karla: "Karla Reg";
+
 
 @font-face {
-    font-family: "Canela";
-    src: url("../../../assets/fonts/Canela-Regular.woff") format("woff");
+    font-family: "GT Walsheim Light";
+    src: url("../../../assets/fonts/gt-walsheim-light.woff") format("woff"); 
 }
-$canela: "Canela";
+$walsheim-light: "GT Walsheim Light";
 
 @font-face {
-    font-family: "GT Pressura Mono";
-    src: url("../../../assets/fonts/GT-Pressura-Mono.otf") format("opentype");
+    font-family: "GT Walsheim Reg";
+    src: url("../../../assets/fonts/gt-walsheim-regular.woff") format("woff"); 
 }
-$pressura: "GT Pressura Mono";
+$walsheim-reg: "GT Walsheim Reg";
 
-$bodyFont: 'Source Code Pro', monospace; // weights: 300, 400
+@font-face {
+    font-family: "GT Walsheim Med";
+    src: url("../../../assets/fonts/gt-walsheim-medium.woff") format("woff"); 
+}
+$walsheim-med: "GT Walsheim Med";

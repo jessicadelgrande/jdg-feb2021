@@ -133,16 +133,20 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 @font-face {
-  font-family: "Apercu";
-  src: url("../../../assets/fonts/apercu-light-pro.woff") format("woff"), url("../../../assets/fonts/apercu-light-pro.woff2") format("woff2"); }
+  font-family: "Karla Reg";
+  src: url("../../../assets/fonts/karla-regular-webfont.woff") format("woff"); }
 
 @font-face {
-  font-family: "Canela";
-  src: url("../../../assets/fonts/Canela-Regular.woff") format("woff"); }
+  font-family: "GT Walsheim Light";
+  src: url("../../../assets/fonts/gt-walsheim-light.woff") format("woff"); }
 
 @font-face {
-  font-family: "GT Pressura Mono";
-  src: url("../../../assets/fonts/GT-Pressura-Mono.otf") format("opentype"); }
+  font-family: "GT Walsheim Reg";
+  src: url("../../../assets/fonts/gt-walsheim-regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "GT Walsheim Med";
+  src: url("../../../assets/fonts/gt-walsheim-medium.woff") format("woff"); }
 
 body {
   background-color: #f6f0ea; }
@@ -163,13 +167,15 @@ body {
     position: fixed;
     top: 32px;
     right: 32px;
-    width: 40px;
-    height: 40px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #ff370c;
     display: block;
     cursor: pointer;
     transition: opacity 0.2s linear; }
     .navbar .toggleMenu:hover > span {
-      background-color: #f16d68; }
+      background-color: #f6f0ea; }
     .navbar .toggleMenu span {
       display: block;
       height: 4px;
@@ -177,16 +183,18 @@ body {
       border-radius: 40px;
       background-color: #292929;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 16px;
+      right: 8px;
       overflow: hidden;
       transition: all 0.4s ease; }
       .navbar .toggleMenu span:nth-child(1) {
         z-index: 9; }
       .navbar .toggleMenu span:nth-child(2) {
-        margin-top: 12px; }
+        margin-top: 11px;
+        right: 8px; }
       .navbar .toggleMenu span:nth-child(3) {
-        margin-top: 24px; }
+        margin-top: 22px;
+        right: 8px; }
     .navbar .toggleMenu ul {
       position: absolute;
       transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -194,13 +202,13 @@ body {
       width: 0;
       right: 0;
       top: 0;
-      background-color: rgba(0, 53, 47, 0.54);
+      background-color: rgba(41, 41, 41, 0.54);
       border-radius: 50%;
       z-index: 18;
       overflow: hidden;
       text-align: right; }
       .navbar .toggleMenu ul .menuItem {
-        font-family: "Apercu";
+        font-family: "Karla Reg";
         display: block;
         height: auto;
         text-transform: uppercase;
@@ -208,37 +216,53 @@ body {
         transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         position: relative; }
         .navbar .toggleMenu ul .menuItem a {
-          color: #cce7ce;
-          font-size: 1.1rem;
+          color: #f6f0ea;
+          font-size: 1.4rem;
           width: 100%;
           text-align: right;
           margin: 8px 0;
           text-decoration: none;
           position: relative; }
           .navbar .toggleMenu ul .menuItem a:hover {
-            color: #f3f1e2; }
-            .navbar .toggleMenu ul .menuItem a:hover:before {
-              content: "*";
-              font-size: 1.4rem;
+            color: #f6f0ea; }
+            .navbar .toggleMenu ul .menuItem a:hover:after {
+              content: "";
               position: absolute;
-              left: -16px; }
+              width: 100%;
+              height: 1px;
+              top: 0;
+              left: 0;
+              color: #ff370c;
+              background-color: #ff370c;
+              border-radius: 8px; }
+            .navbar .toggleMenu ul .menuItem a:hover:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              bottom: 0;
+              left: 0;
+              color: #ff370c;
+              background-color: #ff370c;
+              border-radius: 8px; }
         .navbar .toggleMenu ul .menuItem:first-child {
-          margin-top: 186px; }
+          margin-top: 196px; }
     .navbar .toggleMenu.opened span:nth-child(1) {
       transform: rotate(45deg) translateY(12px) translateX(12px);
       z-index: 100;
-      top: -7px; }
+      top: 9px; }
     .navbar .toggleMenu.opened span:nth-child(2) {
       height: 400px;
       width: 400px;
       right: -160px;
       top: -160px;
       border-radius: 50%;
-      background-color: rgba(0, 53, 47, 0.54);
+      background-color: rgba(41, 41, 41, 0.54);
       overflow: visible; }
     .navbar .toggleMenu.opened span:nth-child(3) {
       transform: rotate(-45deg) translateY(-10px) translateX(10px);
-      z-index: 100; }
+      z-index: 100;
+      margin-top: 24px; }
     .navbar .toggleMenu.opened ul {
       opacity: 1;
       height: 400px;
@@ -249,32 +273,15 @@ body {
 header {
   padding: 32px 0; }
   header h1 {
-    font-family: "Canela";
-    font-weight: 400;
-    font-size: 5.5rem;
-    letter-spacing: 2px;
+    font-family: "GT Walsheim Med";
+    font-size: 4.5rem;
     color: #292929;
-    margin: 20vh 0 16px 0; }
-    @media only screen and (max-width: 1300px) {
-      header h1 {
-        font-size: 7vw; } }
-    @media only screen and (max-width: 900px) {
-      header h1 {
-        width: 85vw; } }
-    @media only screen and (max-width: 620px) {
-      header h1 {
-        font-size: 3rem;
-        margin-top: 10vh; } }
-    @media only screen and (max-width: 500px) {
-      header h1 {
-        font-size: 2.5rem; } }
+    margin: 16px 0; }
   header .subhead {
-    font-family: "GT Pressura Mono";
-    font-weight: 300;
+    font-family: "Karla Reg";
     font-size: 1.4rem;
     line-height: 1.2;
-    letter-spacing: 0.3px;
-    color: #f16d68;
+    color: #ff370c;
     max-width: 700px;
     margin: 4px; }
     @media only screen and (max-width: 860px) {
@@ -285,14 +292,8 @@ header {
         font-size: 1.1rem; } }
 
 .content {
-  width: 65vw;
+  width: 85vw;
   padding: 48px 0; }
-  @media only screen and (max-width: 620px) {
-    .content {
-      width: 75vw; } }
-  @media only screen and (max-width: 550px) {
-    .content {
-      width: 85vw; } }
 
 main {
   position: relative; }
@@ -302,22 +303,15 @@ main {
     display: none;
     animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1); }
     main article .articleTitle {
-      font-family: "Canela";
-      font-weight: 400;
+      font-family: "GT Walsheim Reg";
       font-size: 1.3rem;
-      letter-spacing: 1px;
       color: #292929; }
     main article .articleContent {
-      max-width: 700px;
-      width: 65vw; }
-      @media only screen and (max-width: 620px) {
-        main article .articleContent {
-          width: 80vw; } }
+      max-width: 800px;
+      width: 85vw; }
       main article .articleContent p {
-        font-family: "Apercu";
+        font-family: "Karla Reg";
         font-size: 1.1rem;
-        font-weight: 400;
-        letter-spacing: 0.3px;
         line-height: 1.4;
         color: #292929;
         margin-top: 4px; }
@@ -329,12 +323,19 @@ main {
       font-size: 1.1rem;
       color: #292929;
       position: relative;
-      display: inline-block;
-      transition: all 0.2s ease-in-out 0s; }
+      display: inline-block; }
       main article a:hover {
-        color: #f16d68; }
-        main article a:hover:before {
-          height: 4px; }
+        color: #ff370c; }
+        main article a:hover:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          top: 0;
+          left: 0;
+          color: #ff370c;
+          background-color: #ff370c;
+          border-radius: 8px; }
       main article a:before {
         content: "";
         position: absolute;
@@ -342,8 +343,8 @@ main {
         height: 1px;
         bottom: 0;
         left: 0;
-        color: #f16d68;
-        background-color: #f16d68;
+        color: #ff370c;
+        background-color: #ff370c;
         border-radius: 8px;
         transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
     main article ul {
@@ -356,14 +357,22 @@ main {
         text-transform: uppercase;
         font-size: 1.1rem;
         color: #292929;
-        font-family: "GT Pressura Mono";
+        font-family: "GT Walsheim Reg";
         line-height: 1.6;
         position: relative;
         display: inline-block; }
         main article li a:hover {
-          color: #f16d68; }
-          main article li a:hover:before {
-            height: 4px; }
+          color: #ff370c; }
+          main article li a:hover:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 0;
+            left: 0;
+            color: #ff370c;
+            background-color: #ff370c;
+            border-radius: 8px; }
         main article li a:before {
           content: "";
           position: absolute;
@@ -371,10 +380,9 @@ main {
           height: 1px;
           bottom: 0;
           left: 0;
-          color: #f16d68;
-          background-color: #f16d68;
-          border-radius: 8px;
-          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+          color: #ff370c;
+          background-color: #ff370c;
+          border-radius: 8px; }
 
 @keyframes reveal {
   0% {

@@ -1,6 +1,5 @@
 body {
     background-color: $cream;
-
 }
 
 .viewport {
@@ -21,14 +20,16 @@ body {
         position: fixed;
         top: 32px;
         right: 32px;
-        width: 40px;
-        height: 40px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: $rorange;
         display: block;
         cursor: pointer;
         transition: opacity 0.2s linear;
 
         &:hover > span {
-            background-color: $coral;
+            background-color: $cream;
         }
 
         span {
@@ -38,8 +39,8 @@ body {
             border-radius: 40px;
             background-color: $grey;
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 16px;
+            right: 8px;
             overflow: hidden;
             transition: all 0.4s ease;
 
@@ -48,11 +49,13 @@ body {
             }
 
             &:nth-child(2) {
-                margin-top: 12px;
+                margin-top: 11px;
+                right: 8px;
             }
 
             &:nth-child(3) {
-                margin-top: 24px;
+                margin-top: 22px;
+                right: 8px;
             }
         }
 
@@ -63,14 +66,14 @@ body {
             width: 0;
             right: 0;
             top: 0;
-            background-color: rgba(0, 53, 47, 0.54);
+            background-color: rgba(41, 41, 41, 0.54);
             border-radius: 50%;
             z-index: 18;
             overflow: hidden;
             text-align: right;
 
             .menuItem  {
-                font-family: $apercu;
+                font-family: $karla;
                 display: block;
                 height: auto;
                 text-transform: uppercase;
@@ -79,8 +82,8 @@ body {
                 position: relative;
 
                 a {
-                    color: $blue;
-                    font-size: 1.1rem;
+                    color: $cream;
+                    font-size: 1.4rem;
                     width: 100%;
                     text-align: right;
                     margin: 8px 0;
@@ -88,22 +91,38 @@ body {
                     position: relative;
 
                     &:hover {
-                        color: $eggshell;
+                        color: $cream;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            top: 0;
+                            left: 0;
+                            color: $rorange;
+                            background-color: $rorange;
+                            border-radius: 8px;
+                        }
 
                         &:before {
-                            content: "*";
-                            font-size: 1.4rem;
+                            content: "";
                             position: absolute;
-                            left: -16px;
+                            width: 100%;
+                            height: 1px;
+                            bottom: 0;
+                            left: 0;
+                            color: $rorange;
+                            background-color: $rorange;
+                            border-radius: 8px;
                         }
                     }
                 }
 
                 &:first-child {
-                    margin-top: 186px;
+                    margin-top: 196px;
                 }
             }
-
         }
 
         &.opened {
@@ -113,7 +132,7 @@ body {
                 &:nth-child(1) {
                     transform: rotate(45deg) translateY(12px) translateX(12px);
                     z-index: 100;
-                    top: -7px;
+                    top: 9px;
                 }
 
                 &:nth-child(2) {
@@ -122,13 +141,14 @@ body {
                     right: -160px;
                     top: -160px;
                     border-radius: 50%;
-                    background-color: rgba(0, 53, 47, 0.54);
+                    background-color: rgba(41, 41, 41, 0.54);
                     overflow: visible;
                 }
 
                 &:nth-child(3) {
                     transform: rotate(-45deg) translateY(-10px) translateX(10px);
                     z-index: 100;
+                    margin-top: 24px;
                 }
             }
 
@@ -149,38 +169,17 @@ header {
     padding: 32px 0;
 
     h1 {
-        font-family: $canela;
-        font-weight: 400;
-        font-size: 5.5rem;
-        letter-spacing: 2px;
+        font-family: $walsheim-med;
+        font-size: 4.5rem;
         color: $grey;
-        margin: 20vh 0 16px 0;
-
-        @media only screen and (max-width: 1300px) {
-            font-size: 7vw;
-        }
-
-        @media only screen and (max-width: 900px) {
-            width: 85vw;
-        }
-
-        @media only screen and (max-width: 620px) {
-            font-size: 3rem;
-            margin-top: 10vh;
-        }
-
-        @media only screen and (max-width: 500px) {
-            font-size: 2.5rem;
-        }
+        margin: 16px 0;
     }
     
     .subhead {
-        font-family: $pressura;
-        font-weight: 300;
+        font-family: $karla;
         font-size: 1.4rem;
         line-height: 1.2;
-        letter-spacing: 0.3px;
-        color: $coral;
+        color: $rorange;
         max-width: 700px;
         margin: 4px;
 

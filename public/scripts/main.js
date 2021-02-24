@@ -91,7 +91,7 @@ var chooseContent = function chooseContent() {
 		}
 
 		// updates gsap window height when new content is loaded
-		updateScroller();
+		// updateScroller();
 	});
 };
 
