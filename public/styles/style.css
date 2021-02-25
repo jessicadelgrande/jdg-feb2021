@@ -287,12 +287,6 @@ header {
     color: #ff370c;
     max-width: 700px;
     margin: 4px; }
-    @media only screen and (max-width: 860px) {
-      header .subhead {
-        font-size: 1.2rem; } }
-    @media only screen and (max-width: 620px) {
-      header .subhead {
-        font-size: 1.1rem; } }
 
 .content {
   width: 85vw;
